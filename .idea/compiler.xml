@@ -6,8 +6,8 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="pet-clinic-data" />
         <module name="pet-clinic-web" />
+        <module name="pet-clinic-data" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
