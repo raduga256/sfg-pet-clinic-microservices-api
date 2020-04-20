@@ -1,6 +1,6 @@
 package guru.raduga256.sfgpetclinic.model;
 
-public class PetType {
+public class PetType extends BaseEntity {
     private String name;
 
     public String getName() {
