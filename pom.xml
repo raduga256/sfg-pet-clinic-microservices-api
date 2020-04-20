@@ -19,6 +19,8 @@
     <description>Spring Boot 2.X Pet Clinic Project</description>
 
     <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <java.version>11</java.version>
     </properties>
 
@@ -40,7 +42,7 @@
     </build>
     <scm>
         <developerConnection>scm:git:git@github.com/raduga256/sfg-pet-clinic.git</developerConnection>
-      <tag>sfg-pet-clinic-0.0.1</tag>
+        <tag>sfg-pet-clinic-0.0.1</tag>
     </scm>
 
 </project>
