@@ -59,11 +59,7 @@
         </dependency>
 
 
-        <dependency>
-            <groupId>org.webjars</groupId>
-            <artifactId>bootstrap</artifactId>
-        <version>${webjars-bootstrap.version}</version>
-        </dependency>
+
 
         <!-- end of webjars -->
 
@@ -78,6 +74,7 @@
                 </exclusion>
             </exclusions>
         </dependency>
+
 
     </dependencies>
 
@@ -103,16 +100,16 @@
                     <contextFolder>${basedir}/src/main/less</contextFolder>
                 </configuration>
                 <dependencies>
-                <dependency>
-                    <groupId>org.webjars</groupId>
-                    <artifactId>bootstrap</artifactId>
-                    <version>${webjars-bootstrap.version}</version>
-                </dependency>
                     <dependency>
-                        <groupId>org.mockito</groupId>
-                        <artifactId>mockito-core</artifactId>
-                        <version>${mockito.version}</version>
+                        <groupId>org.webjars</groupId>
+                        <artifactId>bootstrap</artifactId>
+                        <version>${webjars-bootstrap.version}</version>
                     </dependency>
+                <dependency>
+                    <groupId>org.mockito</groupId>
+                    <artifactId>mockito-core</artifactId>
+                    <version>${mockito.version}</version>
+                </dependency>
                 </dependencies>
             </plugin>
         </plugins>
