@@ -1,10 +1,7 @@
 package guru.raduga256.sfgpetclinic.bootsrap;
 
 import guru.raduga256.sfgpetclinic.model.*;
-import guru.raduga256.sfgpetclinic.services.OwnerService;
-import guru.raduga256.sfgpetclinic.services.PetTypeService;
-import guru.raduga256.sfgpetclinic.services.SpecialityService;
-import guru.raduga256.sfgpetclinic.services.VetService;
+import guru.raduga256.sfgpetclinic.services.*;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
@@ -17,13 +14,15 @@ public class DataLoader implements CommandLineRunner {
     private final VetService vetService;
     private final PetTypeService petTypeService;
     private final SpecialityService specialityService;
+    private final VisitService visitService;
 
     public DataLoader(OwnerService ownerService, VetService vetService, PetTypeService petTypeService,
-                      SpecialityService specialityService) {
+                      SpecialityService specialityService, VisitService visitService) {
         this.ownerService = ownerService;
         this.vetService = vetService;
         this.petTypeService = petTypeService;
         this.specialityService = specialityService;
+        this.visitService = visitService;
     }
 
     @Override
@@ -36,6 +35,7 @@ public class DataLoader implements CommandLineRunner {
     }
 
     private void loadData() {
+
         PetType dog = new PetType();
         dog.setName("Dog");
         PetType savedDogPetType = petTypeService.save(dog);
@@ -88,6 +88,12 @@ public class DataLoader implements CommandLineRunner {
         owner2.getPets().add(fionasCat);
 
         ownerService.save(owner2);
+
+        Visit catVisit = new Visit();
+        catVisit.setPet(fionasCat);
+        catVisit.setDate(LocalDate.now());
+        catVisit.setDescription("Sneezy Kitty");
+        visitService.save(catVisit);
 
         System.out.println("Loaded Owners .......");
 
