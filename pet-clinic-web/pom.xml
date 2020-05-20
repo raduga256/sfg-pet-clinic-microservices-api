@@ -4,6 +4,7 @@
         <artifactId>sfg-pet-clinic</artifactId>
         <groupId>guru.raduga256</groupId>
         <version>0.0.1</version>
+
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
@@ -39,6 +40,12 @@
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
 
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-devtools</artifactId>
+            <scope>runtime</scope>
+        </dependency>
+
         <!-- webjars -->
 
         <dependency>
@@ -51,7 +58,6 @@
         <version>${webjars-jquery.version}</version>
         </dependency>
 
-
         <dependency>
             <groupId>org.webjars</groupId>
             <artifactId>jquery-ui</artifactId>
@@ -63,10 +69,6 @@
             <artifactId>bootstrap</artifactId>
             <version>${webjars-bootstrap.version}</version>
         </dependency>
-
-
-
-
         <!-- end of webjars -->
 
         <dependency>
@@ -114,7 +116,7 @@
                 <dependency>
                     <groupId>org.mockito</groupId>
                     <artifactId>mockito-core</artifactId>
-                    <version>${mockito.version}</version>
+                    <version>2.23.0</version>
                 </dependency>
                 </dependencies>
             </plugin>
